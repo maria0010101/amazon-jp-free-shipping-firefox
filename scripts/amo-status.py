@@ -34,11 +34,11 @@ for v in data.get('results', []):
         'edit_url':v.get('edit_url'), 'compatibility':v.get('compatibility'),
         'file':{k:f.get(k) for k in ('id','status','is_signed','size','url')}
     })
-(root/'test-results').mkdir(exist_ok=True)
 (root/'test-results/amo-status.json').write_text(json.dumps(items,indent=2))
 print(json.dumps(items,indent=2))
 if '--download' in sys.argv:
-    item = next(v for v in items if v['version']=='1.0.0' and v['channel']=='unlisted')
+    item = next(v for v in items if v['id']==6720859 and v['version']=='1.0.0' and v['channel']=='unlisted')
+    assert item['file']['id']==5264942, 'Unexpected AMO file'
     if item['file']['status'] != 'public':
         print('PENDING: not approved; no download and no resubmission.')
         sys.exit(0)
@@ -53,7 +53,10 @@ if '--download' in sys.argv:
         assert 'META-INF/mozilla.rsa' in z.namelist(), 'Missing Mozilla signature'
         m = json.loads(z.read('manifest.json'))
         assert m['version']=='1.0.0' and m['browser_specific_settings']['gecko']['id']==guid
-        for name in ('manifest.json','content.js','content.css'):
+        # AMO reserializes JSON (whitespace and Unicode escapes); compare its
+        # complete parsed structure, while executable JS/CSS remain byte-exact.
+        assert m == json.loads((root/'extension/manifest.json').read_text()), 'Manifest semantics differ'
+        for name in ('content.js','content.css'):
             assert z.read(name)==(root/'extension'/name).read_bytes(), 'Payload differs: '+name
     dest.write_bytes(payload)
-    print('Downloaded signed XPI; payload matches extension/.')
+    print('Downloaded signed XPI; manifest semantics and JS/CSS bytes match extension/.')

@@ -8,9 +8,9 @@ Firefox 與 Firefox for Android 的輕量 WebExtension：在 Amazon 日本搜尋
 
 - 桌面 Firefox 140+、Android Firefox 142+。
 - 支援日、英、韓、簡體中文與繁體中文免運文字；商品動態更新後重新辨識。
-- Firefox 160 隔離測試的 19 項檢查通過，web-ext lint 無錯誤／警告。
+- Firefox 160 已簽章永久安裝隔離測試的 20 項檢查通過，web-ext lint 無錯誤／警告。
 - Android 尚未實機驗證；Amazon 公開實站測試因連線逾時受阻。窄版截圖是桌面 Firefox 人工 fixture，不是 Android 實測。
-- 已申請 Mozilla 不公開簽章，尚待審查；這份來源不是已簽章安裝檔。
+- 已取得 Mozilla 不公開（unlisted）簽章，強制簽章檢查下永久安裝成功（signedState=2）；這份儲存庫提供來源，不包含已簽章 XPI。
 - 標色只代表頁面出現免運文字，實際免運資格、門檻及可配送地區以配送地址與 Amazon 結帳畫面為準。
 
 ## 安裝與開發
@@ -32,7 +32,7 @@ Firefox 開啟 `about:debugging#/runtime/this-firefox` →「載入暫時附加�
 
 正式版長期安裝需要 Mozilla 簽章；不要把建置輸出的 unsigned XPI 當作已簽章檔。取得已簽章檔後，在支援檔案安裝的 Android Firefox 版本，設定 →「關於 Firefox」→連點標誌啟用開發者選單，再返回設定 →「安裝擴充套件檔案」。實際選項名稱依版本而異；沒有該入口時需使用支援 Android 的 AMO 公開頁面安裝。
 
-本專案未公開上架 AMO；GitHub 儲存庫公開不代表 AMO 簽章已核准。送審與下載工具位於 `scripts/`，API 憑證必須放在儲存庫之外，禁止提交金鑰。
+本專案未公開上架 AMO；已核准的是不公開簽章，不是 AMO 公開上架。送審與下載工具位於 `scripts/`，API 憑證必須放在儲存庫之外，禁止提交金鑰。
 
 ## 原始參考出處
 
