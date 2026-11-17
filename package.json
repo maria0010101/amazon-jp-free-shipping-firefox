@@ -1,0 +1,11 @@
+{
+  "name": "amazon-jp-free-shipping-firefox-local",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "lint": "web-ext lint --source-dir extension --warnings-as-errors",
+    "test:firefox": "node tests/firefox.cjs",
+    "build": "python3 scripts/build.py"
+  },
+  "devDependencies": { "selenium-webdriver": "4.52.0", "web-ext": "10.8.0" }
+}

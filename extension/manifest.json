@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Amazon 日本免運標示",
+  "version": "1.0.0",
+  "description": "在 Amazon 日本商品卡片標示免運文字（含條件式免運），支援桌面與 Android Firefox；不隱藏商品、不蒐集資料。",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "amazon-jp-free-shipping@local.hpd",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": { "required": ["none"] }
+    },
+    "gecko_android": { "strict_min_version": "142.0" }
+  },
+  "content_scripts": [{
+    "matches": ["https://www.amazon.co.jp/*", "https://amazon.co.jp/*"],
+    "js": ["content.js"],
+    "css": ["content.css"],
+    "run_at": "document_idle"
+  }]
+}

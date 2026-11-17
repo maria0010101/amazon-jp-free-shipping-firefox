@@ -1,0 +1,13 @@
+node_modules/
+dist/
+test-results/
+upstream/
+.env
+.env.*
+*.pem
+*.key
+*API*Key*
+*credential*note*
+.amo-upload-uuid
+.web-extension-id
+__pycache__/

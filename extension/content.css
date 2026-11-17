@@ -1,0 +1,8 @@
+/* Keep Amazon's dimensions and text colors; only decorate qualifying cards. */
+.ajfs-free-shipping {
+  background-color: #e7f4e4 !important;
+  box-shadow: inset 3px 0 0 #36743d !important;
+}
+@media (prefers-color-scheme: dark) {
+  .ajfs-free-shipping { background-color: rgba(82, 154, 77, .18) !important; }
+}

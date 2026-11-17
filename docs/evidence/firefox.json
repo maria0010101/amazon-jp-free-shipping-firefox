@@ -1,0 +1,83 @@
+{
+  "date": "2026-11-17T05:42:23.504Z",
+  "browser": "160.0",
+  "fixtureOrigin": "Amazon hostname mapped to loopback in isolated profile only",
+  "results": [
+    {
+      "name": "unchanged production XPI temporary install",
+      "passed": true
+    },
+    {
+      "name": "ja",
+      "passed": true
+    },
+    {
+      "name": "ja2",
+      "passed": true
+    },
+    {
+      "name": "en",
+      "passed": true
+    },
+    {
+      "name": "ko",
+      "passed": true
+    },
+    {
+      "name": "cn",
+      "passed": true
+    },
+    {
+      "name": "tw",
+      "passed": true
+    },
+    {
+      "name": "conditional",
+      "passed": true
+    },
+    {
+      "name": "paid",
+      "passed": true
+    },
+    {
+      "name": "threshold",
+      "passed": true
+    },
+    {
+      "name": "negative",
+      "passed": true
+    },
+    {
+      "name": "negativeJA",
+      "passed": true
+    },
+    {
+      "name": "negativeTW",
+      "passed": true
+    },
+    {
+      "name": "title",
+      "passed": true
+    },
+    {
+      "name": "mobile",
+      "passed": true
+    },
+    {
+      "name": "characterData mutation removes stale highlight",
+      "passed": true
+    },
+    {
+      "name": "replacement and newly inserted carousel card",
+      "passed": true
+    },
+    {
+      "name": "390px desktop Firefox viewport (NOT Android runtime)",
+      "passed": true
+    },
+    {
+      "name": "non-Amazon host excluded",
+      "passed": true
+    }
+  ]
+}

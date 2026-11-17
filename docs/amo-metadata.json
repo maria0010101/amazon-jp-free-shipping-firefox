@@ -1,0 +1,12 @@
+{
+  "version": {
+    "compatibility": [
+      "firefox",
+      "android"
+    ]
+  },
+  "description": {
+    "zh-TW": "在 Amazon 日本商品卡片標示免運文字（含條件式免運），支援桌面與 Android Firefox。不隱藏其他商品，不蒐集或傳送個人資料。實際免運資格與配送範圍請以 Amazon 配送地址及結帳畫面為準。\n\n原始參考出處\n本附加元件的功能與商品卡片辨識方式參考 Chrome 擴充功能「Amazon Japan Free Shipping Filter」1.0 版，原作者／商店提供者為 SpeakingApple。\n\n原始 Chrome Web Store 頁面：\nhttps://chromewebstore.google.com/detail/amazon-japan-free-shippin/pakgkmibfflbeegabolaobfgnldglmbn\n\n本版本為獨立實作的 Firefox／Android 相容改作，並非原作者發布或背書的官方版本，亦與 Amazon 或 Mozilla 無隸屬關係。原擴充功能未附明示開源授權；此出處標示不代表取得其授權或將原作宣稱為開源。\n\n專案原始碼與公開備份\nhttps://github.com/maria0010101/amazon-jp-free-shipping-firefox",
+    "en-US": "Highlights free-shipping text, including conditional offers, on Amazon Japan product cards. Supports desktop Firefox and Firefox for Android. Does not hide other products or collect or transmit personal data. Delivery eligibility depends on the shipping address and Amazon checkout.\n\nOriginal reference\nThe functionality and product-card identification were informed by Amazon Japan Free Shipping Filter version 1.0, a Chrome extension offered by SpeakingApple.\n\nOriginal Chrome Web Store page:\nhttps://chromewebstore.google.com/detail/amazon-japan-free-shippin/pakgkmibfflbeegabolaobfgnldglmbn\n\nThis is an independently implemented Firefox/Android adaptation, not an official release or endorsement by the original author. It is not affiliated with Amazon or Mozilla. The original extension did not include an explicit open-source license; attribution does not imply permission or relicense the original work.\n\nProject source code and public backup\nhttps://github.com/maria0010101/amazon-jp-free-shipping-firefox"
+  }
+}
